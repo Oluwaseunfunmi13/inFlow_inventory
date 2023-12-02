@@ -1,16 +1,73 @@
 const mongoose = require('mongoose')
+
+/*
+
+Name
+Category
+Quantity
+SerialNumber
+Version
+ShelfLife
+Suppliers
+ArrivalDate
+Description
+
+*/
+
 const Schema = mongoose.Schema
 
 const productSchema = new Schema({
-  title: {
+  Name: {
     type: String,
     required: true
   },
-  units: {
+  
+  Category: {
+    type: String,
+    required: true
+  },
+  
+  Quantity: {
     type: Number,
     required: true
   },
-  category: {
+
+  SerialNumber: {
+    type: String,
+    required: true
+  },
+
+  Version: {
+    type: Number,
+    required: true
+  },
+
+  ShelfLife: {
+    type: String,
+    required: true
+  },
+
+  Suppliers: {
+    type: String,
+    required: true    
+  },
+
+  // undecided 
+  // Picture: {
+
+  // }
+
+  ArrivalDate: {
+  type: String,
+  required: true
+  },
+
+  Description: {
+  type: String,
+  required: true
+  },
+
+  user_id: {
     type: String,
     required: true
   }
